@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why us</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+        /*logo*/
+      .logo{
+  z-index: 40;
+  /* position: fixed; */
+  height: 50px;
+  width: 100%;
+  background-color: white;
+  
+}
+.logo img{
+  height: 50px;
+  width: 80px;
+}
+
+/*toggle*/
+.toggle{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: red url(image/menu.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 40;
+}
+.toggle.active{
+    background: red url(image/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 50;
+  }
+
+/*navigation*/
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 45;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.navigation.active{
+    left: 0;
+    background-color: white;
+}
+.navigation ul{
+    position: relative;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    text-align: center;
+    font-family: Aclonica;
+}
+.navigation ul li a{
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 400;
+}
+.navigation .navhpc{
+  margin-top: 250px;
+}
+
+.navhpc a{
+    color: navy;
+}
+
+.navhpc a:hover{
+    color:red;
+}
+
+
+/*social-bar*/
+.navigation .social-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .social-bar a{
+    display: inline-block;
+    transform: scale(0.5);
+}
+.navigation .email{
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.5);
+  }
+.insta, .facebook, .twitter{
+    height: 50px;
+    padding: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.instat, .facebookt, .twittert{
+    height: 100px;
+    padding: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.instat:hover,.facebookt:hover,.twittert:hover{
+    transform: scale(1.25);
+}
+        #head {
+            background-color: rgb(230, 255, 3);
+            color: rgb(97, 14, 117);
+            font-size: 50px;
+            margin-top: 0px;
+        }
+
+        /* #organic {
+            color: brown;
+            font-size: 30px;
+            padding: 5px;
+            margin-left: 425px;
+            margin-right: 425px;
+            white-space: nowrap;
+            border-radius: 10px;
+            text-align: center;
+
+        } */
+
+        #organicimg {
+                width: 500px;
+            }
+
+
+        #descp {
+            font-size: 25px;
+            background-color: khaki;
+            color: blue;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 0%;
+
+        }
+
+        #safety {
+            font-size: 25px;
+            background-color: khaki;
+            color: blue;
+            font-weight: bold;
+            padding: 10px;
+            margin-top: 0%;
+
+        }
+
+        .head2 {
+            background-color: rgb(230, 255, 3);
+            color: rgb(97, 14, 117);
+            margin-bottom: 0%;
+        }
+
+        @media screen and (max-width:1300px) {
+            #organic {
+                font-size: 30px;
+                float: inline-start;
+                margin-left: 50%;
+                margin-right: 50%;
+                text-align: center;
+                display: inline;
+                bottom: 2%;
+            }
+
+            #organicimg {
+                width: 400px;
+            }
+    </style>
+    <link rel="icon" href="image\OnlyLogo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+  <div class="logo"><img src="image\OnlyLogo.png" alt=""></div>
+  <div class="toggle"></div>
+  <div class="navigation">
+      <ul class="navhpc">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+      </ul>
+      <div class="social-bar">
+        <ul>
+            <li><a href="https://www.facebook.com/"><img src="facebook.png" alt="" class="facebookt"></a></li>
+            <li><a href="https://www.instagram.com/"><img src="instagram.png" alt="" class="instat"></a></li>
+            <li><a href="https://twitter.com/?lang=en"><img src="twitter.png" alt="" class="twittert"></a></li>
+        </ul>
+    </div>
+  </div>
+
+</header>
+
+    <h1 id="head">
+        <center>Why us</center>
+    </h1>
+
+    <h1 id="organic">
+        <center>
+            <img src="organic1.png" alt="" id="organicimg">
+        </center>
+    </h1>
+
+    <h2 class="head2">Why should I use Exotic Farms?</h2>
+    <p id="descp">Exotic Farms allows you to walk away from the drudgery of shopping and welcome an easy
+        relaxed way of browsing and shopping for dry fruits. Discover new products and shop for all your
+        needs from the comfort of your home or office. No more getting stuck in traffic jams, paying for parking,
+        standing in long queues and carrying heavy bags – get everything you need, when you need, right at your
+        doorstep. Dry fruit shopping online is now easy as every product on your monthly shopping list, is now available
+        online at Exotic Farms.</p>
+
+    <h2 class="head2">Safety Measures<small>(Due to Covid-19)</small></h2>
+    <div id="safety">
+        <p class="safety">We at Exotic Farms highly prioritise our consumer safety. The safety practices we follow
+            nowdays are:
+        </p>
+        <ul>
+            <li>We have divided our staff in shifts to maintain social distancing</li>
+            <li>Workers are working in a bio bubble.</li>
+            <li>Everyday the packing sites are thoroughly sanitised.</li>
+            <li>High safety is ensured from our side in delievering of products.</li>
+
+        </ul>
+    </div>
+
+    <P><b>NOTE:</b><i><span style="color: red; font-size: 20px; font-weight: bold;"> Unfortunately due to pandemic we
+                have halted our offline services in some cities of India.</span></i> </P>
+
+
+</body>
+
+<script>
+      const toggle = document.querySelector('.toggle')
+      const navigation = document.querySelector('.navigation')
+    
+      toggle.addEventListener('click', () =>{
+        toggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+    })
+     </script>
+</html>

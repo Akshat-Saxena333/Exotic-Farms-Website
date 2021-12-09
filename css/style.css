@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+/*reset*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+  padding-bottom: 18px;
+}
+
+/*logo*/
+.logo{
+    margin-left: 25px;
+    margin-top: 20px;
+}
+.logo img{
+  height: 40px;
+  width: 60px;
+}
+
+/*toggle*/
+.toggle{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: red url(../menu.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 20;
+}
+.toggle.active{
+    background: red url(../close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 20;
+  }
+
+/*navigation*/
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.navigation.active{
+    left: 0;
+    background-color: white;
+}
+.navigation ul{
+    position: relative;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    text-align: center;
+    font-family: aclonica;
+}
+.navigation ul li a{
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 400;
+}
+.navigation .navhpc{
+  margin-top: 250px;
+}
+
+.navhpc a{
+    color: navy;
+}
+
+.navhpc a:hover{
+    color:red;
+}
+
+
+
+
+/*social-bar*/
+.navigation .social-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .social-bar a{
+    display: inline-block;
+    transform: scale(0.5);
+}
+.navigation .email{
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.5);
+  }
+.insta, .facebook, .twitter{
+    height: 50px;
+    padding: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.instat, .facebookt, .twittert{
+    height: 100px;
+    padding: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.instat:hover,.facebookt:hover,.twittert:hover{
+    transform: scale(1.25);
+}
+
+/*product page*/
+
+.info{
+  margin: 15px;
+}
+.info p{
+  text-align: center;
+  font-family: aclonica;
+}
+
+h3{
+    font-family: aclonica;
+}
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .product .item {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 5px;
+  }
+  
+  .product .item .name{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-color: white;
+    width: 140px;
+    height: 30 px;
+    font-family: cursive;
+    text-align: center;
+    border-radius: 5px 0 0 0;
+    color: navy;
+    font-size: 1.3rem;
+  }
+
+  .product .item img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .product .item .action {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(19, 14, 14, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .product .item:hover .action {
+    opacity: 1;
+  }
+  
+  .product .item .action a {
+    display: inline-block;
+    color: whitesmoke;
+    text-decoration: none;
+    border: 1px solid whitesmoke;
+    border-radius: 7px;
+    padding: 5px 15px;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    body{
+      padding-bottom: 18px;
+    }
+  }
+
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+    background-color: black;
+  }
+
+footer{
+    background-color: black;
+    color: ghostwhite;
+    font-family: initial;
+}
+
+h2,address,p{
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.follow-us{
+    width: 100%;
+    padding-left: 20px;
+}
+
+a:hover{
+    color: lime;
+    text-decoration: underline; 
+}
+
+
+.insta:hover,.facebook:hover,.twitter:hover{
+    transform: scale(1.25);
+}
+
+.follow-us-title{
+    padding-top: 0%;
+    padding-bottom: 0%;
+}
+
+
+ul{
+    padding-left: 43px;
+}
+
+
+@media screen and (min-width:1000px) {
+
+    footer{
+        height: auto;
+        font-size: 20px;
+    }
+
+    a{
+        text-decoration: none;
+        color: ghostwhite;
+        font-size: inherit;
+        padding: 0%;
+        font-size: 20px;
+    }
+
+    .grid-container{
+        display: inline-grid;
+        grid-template-columns: auto auto auto;
+    }
+    
+    .grid-item{
+        padding-right: 80px;
+        padding-left: 80px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        
+    }
+
+    .arrowup{
+        width: 50px;
+        height: 50px;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+    }
+
+    #map{
+        width: 500px;
+        height: 350px;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+
+    footer{
+        height: auto;
+        font-size: small;
+    }
+
+    a{
+        text-decoration: none;
+        color: ghostwhite;
+        font-size: inherit;
+        padding: 0%;
+        font-size: 15px;
+    }
+
+    .grid-container{
+        display: inline-grid;
+        grid-template-columns: 250px auto auto;
+    }
+    
+    .grid-item{
+        padding-right: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .arrowup{
+        width: 40px;
+        height: 40px;
+        opacity: 0.8;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+    }
+
+    #map{
+        width: 350px;
+        height: 250px;
+    }
+
+}
+
+@media screen and (max-width:600px) {
+     #map{
+        width: 200px;
+        height: 200px;
+        display: none;
+    }
+
+    .grid-container{
+        display: inline-grid;
+        grid-template-columns: auto auto auto;
+    }
+    
+    .grid-item{
+        padding-right: auto;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+
+    a{
+        text-decoration: none;
+        color: ghostwhite;
+        font-size: inherit;
+        padding: 0%;
+        font-size: 15px;
+    }
+
+}

@@ -1,0 +1,96 @@
+
+        #contact {
+            color: rgb(0, 4, 255);
+            margin: 10px;
+            background-color: rgb(243, 226, 71);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .class {
+            border-style: groove;
+            border: goldenrod;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: khaki;
+
+
+        }
+
+        #div1 {
+            margin: auto;
+            max-width: 600px;
+            border: goldenrod;
+            border-style: groove;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: lightcyan;
+            
+
+        }
+
+        #feedback {
+            
+           position: relative;
+            margin-top: 20px;
+            max-width: 600px;
+            
+            border: gold;
+            border-radius: 5px;
+            border-style: groove;
+            padding: 25px;
+            padding-bottom: 20px;
+            background-color: rgb(255, 224, 224);
+        }
+
+        #reset {
+            background-color: blue;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        #submit {
+            background-color: red;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        .chead {
+            background-color: greenyellow;
+        }
+
+        #india,
+        #foreign,
+        #office {
+            background-color: rgb(163, 226, 241);
+            font-weight: bold;
+
+        }
+
+        #fheading {
+            background-color: rgb(243, 226, 71);
+            color: rgb(0, 4, 255);
+            padding: 5px;
+            border-radius: 10px;
+
+        }
+        #name{
+            font-size: 15px;
+            margin: 3px;
+        }
+        #mnumber{
+            font-size: 15px;
+            margin: 3px;
+        }
+    
+        #email{
+            font-size: 15px;
+            margin: 3px;
+        }
+    

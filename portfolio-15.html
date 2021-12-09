@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+      *{
+        box-sizing: border-box;
+        margin: 0px;
+        padding: 0px;
+        font-family: Aclonica;
+      }
+      
+/*logo*/
+.logo{
+  z-index: 40;
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background-color: white;
+}
+.logo img{
+  height: 50px;
+  width: 80px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+/*toggle*/
+.toggle{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: red url(image/menu.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 40;
+}
+.toggle.active{
+    background: red url(image/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 50;
+  }
+
+/*navigation*/
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 45;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.navigation.active{
+    left: 0;
+    background-color: white;
+}
+.navigation ul{
+    position: relative;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    text-align: center;
+}
+.navigation ul li a{
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 400;
+}
+.navigation .navhpc{
+  margin-top: 250px;
+}
+
+.navhpc a{
+    color: navy;
+}
+
+.navhpc a:hover{
+    color:red;
+}
+
+
+/*social-bar*/
+.navigation .social-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .social-bar a{
+    display: inline-block;
+    transform: scale(0.5);
+}
+.navigation .email{
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.5);
+  }
+.insta, .facebook, .twitter{
+    height: 50px;
+    padding: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.instat, .facebookt, .twittert{
+    height: 100px;
+    padding: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.instat:hover,.facebookt:hover,.twittert:hover{
+    transform: scale(1.25);
+}
+      .title{
+        position: fixed;
+        z-index: 20;
+        background-color: white;
+        margin-top: 50px;
+        margin-left: 6px;
+        }
+      .detail{
+        text-align: center;
+        max-width: 1000px;
+        padding: 5px;
+        line-height: 25px;
+      }
+      
+  .product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 20px;
+    margin-left: 20px;
+    z-index: 10;
+  }
+  
+  .product .item {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 15px;
+  }
+  
+  .product .item img {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .description{
+    margin: 2px;
+    padding-left: 30px;
+    padding-top: 100px;
+    line-height: 30px;
+    justify-content: center;
+  }
+  .description span{
+    color: rgb(17, 202, 17);
+  }
+  #button1{
+    position: relative;
+    left: 205px;
+    top:  110px;
+  }
+  #button2{
+    position: relative;
+    left: 200px;
+    top:  110px;
+  }
+  #button3{
+    position: relative;
+    left: 220px;
+    top:  110px;
+  }
+
+
+  .pdtlist{
+    position: fixed;
+    bottom: 5px;  
+    right: 2px;
+    height: 100%;
+    padding-top: 60px;
+    padding-right: 80px;
+  }
+  
+  .pdtlist a{
+    text-decoration: none;
+    color: royalblue;
+    line-height: 30px;
+  }
+  button{
+    display: inline-block;
+    margin: 3px;
+    width: 200px;
+    height: 30px;
+    text-align: center;
+  }
+  .action{
+    display: none;
+  }
+  @media (min-width: 600px) and (max-width: 1200px){
+    .pdtlist{
+      display: none;
+    }
+    .product{
+      justify-content: center;
+      align-items: center;
+    }
+    .description{
+      padding-top: 5px;
+      line-height: 18px;
+    }
+    .pdtlist{
+      display: none;
+    }
+    .button{
+      display: none;
+    }
+    .product .item .action {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: rgba(19, 14, 14, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .product .item:hover .action {
+    opacity: 1;
+  }
+  
+  .product .item .action a {
+    display: block;
+    color: whitesmoke;
+    text-decoration: none;
+    border: 1px solid whitesmoke;
+    border-radius: 7px;
+    padding: 5px 15px;
+    margin: 2px;
+  }
+  }
+  
+  
+  @media only screen and (max-width: 600px) {
+    header, body{
+      margin: 0px;
+      padding: 0px;
+      float: none;
+      text-align: center;
+      width: 100%;
+    }
+    body{
+      padding-bottom: 18px;
+    }
+    .detail{
+      font-size: 0.9rem;
+      line-height: 14.5px;
+    }
+    .product{
+      justify-content: center;
+      align-items: center;
+    }
+    .description{
+      padding-top: 5px;
+      line-height: 18px;
+    }
+    .pdtlist{
+      display: none;
+    }
+    .button{
+      display: none;
+    }
+    .product .item .action {
+    position: absolute;
+    top: 80%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: rgba(19, 14, 14, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .product .item:hover .action {
+    opacity: 1;
+  }
+  
+  .product .item .action a {
+    display: block;
+    color: whitesmoke;
+    text-decoration: none;
+    border: 1px solid whitesmoke;
+    border-radius: 7px;
+    padding: 5px 15px;
+    margin: 2px;
+  }
+  }
+
+      
+    </style>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link>
+    <title>Charoli</title>
+    <link rel="icon" href="image\OnlyLogo.png" type="image/x-icon">
+</head>
+<header>
+  <div class="logo"><img src="image\OnlyLogo.png" alt=""></div>
+  <div class="toggle"></div>
+    <div class="navigation">
+      <ul class="navhpc">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+      </ul>
+      <div class="social-bar">
+        <ul>
+            <li><a href="https://www.facebook.com/"><img src="facebook.png" alt="" class="facebookt"></a></li>
+            <li><a href="https://www.instagram.com/"><img src="instagram.png" alt="" class="instat"></a></li>
+            <li><a href="https://twitter.com/?lang=en"><img src="twitter.png" alt="" class="twittert"></a></li>
+        </ul>
+      </div>
+  </div>
+</header>
+<body>
+  <div class="title">
+    <h1>Charoli </h1>
+    <p class="detail">Exotic Farms Charoli seeds are relatively low in calories and are a good source of protein <br> and fat (59 grams per 100 grams of charoli seeds). They contain good amounts of dietary fiber. Charoli provides you with vitamins like vitamin C, vitamin B1, vitamin B2 and niacin. </p>
+
+  </div>
+  <pre>
+
+
+
+
+
+
+
+
+
+
+  </pre>
+    <div class="product">
+        <div class="item">
+          <img src="image\p-15.1.jpg" alt="" />
+          <div class="action">
+            <a onclick="JSbuy()">Buy Now!</a>
+            <a onclick="JSadd()">Add to Cart</a>
+          </div>
+        </div>
+        <div class="description">
+          <h4>Charoli</h4>
+          <span>In Stock.</span>
+          <p>@ &#8377 1400 per Kg.</p>
+        </div>
+        <div id="button1" class="button">
+          <button class="Cart" onclick="JSadd()">Add To Cart</button><br>
+          <button class="buy" onclick="JSbuy()">Buy Now!</button>
+        </div>
+    </div>
+  
+    <div class="pdtlist">
+      <a href="portfolio-1.html">Almonds</a><br>
+      <a href="portfolio-2.html">Cashews</a><br>
+      <a href="portfolio-3.html">Pistachios</a><br>
+      <a href="portfolio-4.html">Saffron</a><br>
+      <a href="portfolio-5.html">Cardamom</a><br>
+      <a href="portfolio-6.html">Raisins</a><br>
+      <a href="portfolio-7.html">Walnuts</a><br>
+      <a href="portfolio-8.html">Dates</a><br>
+      <a href="portfolio-9.html">Fox Nuts</a><br>
+      <a href="portfolio-10.html">Chilgoza</a><br>
+      <a href="portfolio-11.html">Figs</a><br>
+      <a href="portfolio-12.html">Dry Dates</a><br>
+      <a href="portfolio-13.html">Black Raisins</a><br>
+      <a href="portfolio-14.html">Dried Plum</a><br>
+      <a href="portfolio-15.html">Charoli</a><br>
+      <a href="portfolio-16.html">Poppy Seeds</a><br>
+    </div>
+    <script>
+      const toggle = document.querySelector('.toggle')
+      const navigation = document.querySelector('.navigation')
+    
+      toggle.addEventListener('click', () =>{
+        toggle.classList.toggle('active')
+        navigation.classList.toggle('active')
+    })
+
+      function JSadd(){
+ 
+      swal("Success!", " Product added to cart!","success");
+  
+     }
+      function JSbuy(){
+        swal("Thank You!", "The product is purchased", "success")
+      }
+     </script>
+</body>
+</html>

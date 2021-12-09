@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+        #contact {
+            color: rgb(0, 4, 255);
+            margin: 10px;
+            background-color: rgb(243, 226, 71);
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .class {
+            border-style: groove;
+            border: goldenrod;
+            border-radius: 10px;
+            padding: 10px;
+            background-color: khaki;
+
+
+        }
+
+        #div1 {
+            margin: auto;
+            max-width: 300px;
+            border: goldenrod;
+            border-style: groove;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: lightcyan;
+            
+
+        }
+
+        #feedback {
+            
+            margin: auto;
+            margin-top: 20px;
+            max-width: 300px;
+            
+            border: gold;
+            border-radius: 5px;
+            border-style: groove;
+            padding: 25px;
+            padding-bottom: 20px;
+            background-color: lightcyan;
+        }
+
+        #reset {
+            background-color: blue;
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        #submit {
+            background-color: red;
+            padding: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        #submit a{
+            color: white; 
+            text-decoration: none;
+        }
+
+        .chead {
+            background-color: greenyellow;
+        }
+
+        #india,
+        #foreign,
+        #office {
+            background-color: rgb(163, 226, 241);
+            font-weight: bold;
+
+        }
+
+        #fheading {
+            background-color: rgb(243, 226, 71);
+            color: rgb(0, 4, 255);
+            padding: 5px;
+            border-radius: 10px;
+
+        }
+        #name{
+            font-size: 15px;
+            margin: 3px;
+        }
+        #mnumber{
+            font-size: 15px;
+            margin: 3px;
+        }
+    
+        #email{
+            font-size: 15px;
+            margin: 3px;
+        }
+    
+    /*toggle*/
+.toggle{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    background: red url(image/menu.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 40;
+}
+.toggle.active{
+    background: red url(image/close.png);
+    background-size: 25px;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 50;
+  }
+
+/*navigation*/
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    z-index: 45;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+.navigation.active{
+    left: 0;
+    background-color: white;
+}
+.navigation ul{
+    position: relative;
+}
+.navigation ul li{
+    position: relative;
+    list-style: none;
+    text-align: center;
+    font-family: Aclonica;
+}
+.navigation ul li a{
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: 400;
+}
+.navigation .navhpc{
+  margin-top: 250px;
+}
+
+.navhpc a{
+    color: navy;
+}
+
+.navhpc a:hover{
+    color:red;
+}
+
+
+/*social-bar*/
+.navigation .social-bar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation .social-bar a{
+    display: inline-block;
+    transform: scale(0.5);
+}
+.navigation .email{
+    position: absolute;
+    bottom: 20px;
+    transform: scale(0.5);
+  }
+.insta, .facebook, .twitter{
+    height: 50px;
+    padding: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.instat, .facebookt, .twittert{
+    height: 100px;
+    padding: 10px;
+    transition: all 1s ease-in-out;
+}
+
+.instat:hover,.facebookt:hover,.twittert:hover{
+    transform: scale(1.25);
+}
